@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>NYT Most Emailed</h3>
+    {% for story in stories %}
+    <div><p>{{ story.rank }} | <a href={{ story.link }}>{{ story.title }}</a> | {{ story.desc }}</p></div>
+    {% endfor %}
+{% endblock %}
